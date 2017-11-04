@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/kchan902/restaurantReservation/issues"
   },
-  "homepage": "https://github.com/kchan902/restaurantReservation#readme"
+  "homepage": "https://github.com/kchan902/restaurantReservation#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
 }

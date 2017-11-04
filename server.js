@@ -78,7 +78,7 @@ app.get("/all", function(req, res) {
 });
 
 // Search for all tables - provides JSON
-app.get("/api/:currentTables?", function(req, res) {
+app.get("/api/currentTables/:currentTables?", function(req, res) {
   var chosen = req.params.currentTables;
 
   if (chosen) {
@@ -95,7 +95,7 @@ app.get("/api/:currentTables?", function(req, res) {
 });
 
 // Search for waitlist tables - provides JSON
-app.get("/api/:waitlist?", function(req, res) {
+app.get("/api/waitlist/:waitlist?", function(req, res) {
   var chosen = req.params.waitlist;
 
   if (chosen) {
@@ -129,6 +129,6 @@ app.post("/api/new", function(req, res) {
 // =============================================================
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
-  console.log(currentTables);
-  console.log(waitlist);
+  //console.log(currentTables);
+  //console.log(waitlist);
 });

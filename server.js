@@ -7,7 +7,7 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = 3000;
+var PORT = 3001;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -115,19 +115,19 @@ app.get("/api/waitlist/:waitlist?", function(req, res) {
   return res.json(waitlist);
 });
 
-// Create New Waitlist - takes in JSON input
-app.post("/api/new", function(req, res) {
-  // req.body hosts is equal to the JSON post sent from the user
-  // This works because of our body-parser middleware
-  var newWaitlist = req.body;
-  newWaitlist.routeName = newWaitlist.name.replace(/\s+/g, "").toLowerCase();
+// // Create New Waitlist - takes in JSON input
+// app.post("/api/new", function(req, res) {
+//   // req.body hosts is equal to the JSON post sent from the user
+//   // This works because of our body-parser middleware
+//   var newWaitlist = req.body;
+//   newWaitlist.routeName = newWaitlist.name.replace(/\s+/g, "").toLowerCase();
 
-  console.log(newWaitlist);
+//   console.log(newWaitlist);
 
-  waitlist.push(newWaitlist);
+//   waitlist.push(newWaitlist);
 
-  res.json(newWaitlist);
-});
+//   res.json(newWaitlist);
+// });
 
 // Starts the server to begin listening
 // =============================================================
@@ -137,7 +137,16 @@ app.listen(PORT, function() {
   //console.log(waitlist);
 });
 
-
+app.post('/api/currentTables', function(req, res){
+  if(table.length < 5){
+    table.push(req.body);
+    res.json(true)
+  }
+  else{
+    waitlist.push(req.body);
+    res.json(false)
+  }
+})
 
 
 

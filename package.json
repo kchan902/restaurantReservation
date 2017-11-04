@@ -1,0 +1,20 @@
+{
+  "name": "restaurant-reservations",
+  "version": "1.0.0",
+  "description": "find restaurant reservations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchan902/restaurantReservation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kchan902/restaurantReservation/issues"
+  },
+  "homepage": "https://github.com/kchan902/restaurantReservation#readme"
+}
